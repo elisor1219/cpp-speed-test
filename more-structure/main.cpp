@@ -18,6 +18,7 @@ double averageTime(std::vector<double> timeVector) {
     return averageTime;
 }
 
+// TOOD: Make a class/function that takes as input two 'TheTester' objects and runs them
 int main(){
     auto start = high_resolution_clock::now();
     TestOne testOne;
