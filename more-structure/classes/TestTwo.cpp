@@ -9,23 +9,21 @@ using namespace std::chrono;
 
 
 double TestTwo::runTest(){
-    std::vector<int> vectorOfInt;
-    srand(1);
-    // Randomly fill vector with 1s and 0s
-    for (int i = 0; i < 1000000; i++) {
-        vectorOfInt.push_back(rand() % 2);
-    }
-
-    int runFor = vectorOfInt.size();
-
+    /*
+    Here can you put the code that you want to precomute before the test.
+    */
     auto start = high_resolution_clock::now(); // Start timer - - - - 
 
-
-    for (int i = 0; i < runFor; i++) {
-        vectorOfInt[i] = 1;
-    }
+    /*
+    Inside the timers you can put the code that you want to test.
+    */
 
     auto stop = high_resolution_clock::now(); // Stop timer - - - -
     auto duration = duration_cast<microseconds>(stop - start);
+
+    /*
+    And here you can put the code that you want to do after the test.
+    */
+   
     return duration.count();
 }
