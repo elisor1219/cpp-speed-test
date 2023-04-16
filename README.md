@@ -1,22 +1,12 @@
-I am testing if calling a function before a for loop to preproces the data is faster then callin if in the for loop.
-This test shows that it is much faster to call it in the for loop. Where suprising. 
-But yeah, with the pre procesing we have two for loops that runs the same length, but without it we only have one for loop.
+# C++ speed test
 
+This is for testing diffrent functions agins each other.
 
-Other things that needs more testing:
-    1. In a std::vector, [i] is faster then .at(i)
-    2. for-each vs for
-    3. On a std::vector, initilize it as empty and then do pushBack(...) vs initilize it at right size and do .at(i)/[]
-    4. Having a for-each with a pointer to the value vs using [i] in a for
+## How to test
 
-Answer with this test:
-    1. [i] is faster
-    2. for is faster
-    3. Initilize right size and do [] is faster
-    4. [i] in normal for-loop is faster
+I would recomend to use the `more-structure` folder and go in to `classes` and change the `TestOne.cpp` and `TestTwo.cpp`.
+In the files you can put the code you want to test inside the clocks, and any code that you need, but not want to time, can be put before or after the clocks.
 
-Test done in folder:
-    1. "atVSbrackets"
-    2. "forEachVSfor"
-    3. "pushBackVSbrackets"
-    4. "pointerInForEach"
+## How to run
+I would recomed to go into the `more-structure` folder and run `make` and then `./CPP_Speed_Test.out`. 
+This will run the test and output the results to the terminal, as TestOne average time, TestTwo average time and the total time for everything combined.
